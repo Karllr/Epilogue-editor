@@ -57,35 +57,19 @@ function Block(x,y,type1,type2,type3,type4){
             }
         switch(this.type2){
             case 1:
-                if(this.BlockAbove&&!this.BlockBelow&&!this.BlocktoRight&&!this.BlocktoLeft){
+                if(this.BlockAbove&&!this.BlockBelow){
                     this.type3=2;
                     this.type4=1;
                 }
-                if(this.BlockAbove&&this.BlockBelow&&!this.BlocktoRight&&!this.BlocktoLeft){
+                if(this.BlockAbove&&this.BlockBelow){
                     this.type3=2;
                     this.type4=2;
                 }
-                if(this.BlockAbove&&this.BlockBelow&&this.BlocktoRight&&!this.BlocktoLeft){
-                    this.type3=2;
-                    this.type4=2;
-                }
-                if(this.BlockAbove&&this.BlockBelow&&this.BlocktoRight&&this.BlocktoLeft){
-                    this.type3=2;
-                    this.type4=2;
-                }
-                if(this.BlockAbove&&!this.BlockBelow&&this.BlocktoRight&&!this.BlocktoLeft){
-                    this.type3=2;
+                if(!this.BlockAbove&&!this.BlockBelow){
+                    this.type3=1;
                     this.type4=1;
                 }
-                if(this.BlockAbove&&!this.BlockBelow&&!this.BlocktoRight&&this.BlocktoLeft){
-                    this.type3=2;
-                    this.type4=1;
-                }
-                if(this.BlockAbove&&this.BlockBelow&&!this.BlocktoRight&&this.BlocktoLeft){
-                    this.type3=2;
-                    this.type4=2;
-                }
-                if(!this.BlockAbove&&!this.BlockBelow&&!this.BlocktoRight&&!this.BlocktoLeft){
+                if(!this.BlockAbove&&this.BlockBelow){
                     this.type3=1;
                     this.type4=1;
                 }
